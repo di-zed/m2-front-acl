@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author DiZed Team
+ * @copyright Copyright (c) DiZed (https://github.com/di-zed/)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!-- Plugin for Http Acl Action Interface. -->
+    <type name="DiZed\FrontAcl\Controller\App\HttpAclActionInterface">
+        <plugin name="DiZed_FrontAcl::HttpAclActionInterface" type="DiZed\FrontAcl\Plugin\Controller\App\HttpAclActionInterface" />
+    </type>
+    <!-- Plugin for Acl Block Interface. -->
+    <type name="DiZed\FrontAcl\Block\View\Element\AclBlockInterface">
+        <plugin name="DiZed_FrontAcl::AclBlockInterface" type="DiZed\FrontAcl\Plugin\Block\View\Element\AclBlockInterface" />
+    </type>
+</config>

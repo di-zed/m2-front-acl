@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * @author DiZed Team
+ * @copyright Copyright (c) DiZed (https://github.com/di-zed/)
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <!-- Add Front ACL tab: -->
+        <referenceBlock name="customer_form">
+            <block class="DiZed\FrontAcl\Block\Adminhtml\Edit\Tab\Permissions"
+                   name="dized.front.acl.tab.permissions"
+                   template="DiZed_FrontAcl::customer/permissions.phtml" />
+        </referenceBlock>
+    </body>
+</page>

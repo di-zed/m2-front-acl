@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author DiZed Team
+ * @copyright Copyright (c) DiZed (https://github.com/di-zed/)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!-- Plugin for the customer save action. -->
+    <type name="Magento\Customer\Controller\Adminhtml\Index\Save">
+        <plugin name="DiZed_FrontAcl::CustomerSave" type="DiZed\FrontAcl\Plugin\Customer\Controller\Adminhtml\Index\Save" />
+    </type>
+    <!-- Plugin for the data provider reporting. -->
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\Reporting">
+        <plugin name="DiZed_FrontAcl::DataProviderReporting" type="DiZed\FrontAcl\Plugin\Framework\View\Element\UiComponent\DataProvider\Reporting" />
+    </type>
+</config>

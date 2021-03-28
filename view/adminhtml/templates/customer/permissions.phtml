@@ -1,0 +1,58 @@
+<?php
+/**
+ * @author DiZed Team
+ * @copyright Copyright (c) DiZed (https://github.com/di-zed/)
+ */
+
+/** @var \DiZed\FrontAcl\Block\Adminhtml\Edit\Tab\Permissions $block */
+/** @var \Magento\Framework\Escaper $escaper */
+?>
+
+<fieldset class="fieldset form-inline entry-edit">
+    <legend class="legend">
+        <span><?= $escaper->escapeHtml(__('Roles')) ?></span>
+    </legend>
+    <br />
+    <div class="field">
+        <label class="label">
+            <span><?= $escaper->escapeHtml(__('Resources')) ?></span>
+        </label>
+        <div class="control">
+            <?= /* @noEscape */ $block->getRoleHtmlSelect() ?>
+        </div>
+    </div>
+</fieldset>
+
+<fieldset class="fieldset form-inline entry-edit">
+    <legend class="legend">
+        <span><?= $escaper->escapeHtml(__('Permissions')) ?></span>
+    </legend>
+    <br />
+    <div class="field" data-role="tree-resources-container">
+        <label class="label">
+            <span><?= $escaper->escapeHtml(__('Resources')) ?></span>
+        </label>
+        <div class="control">
+            <div class="tree x-tree" data-role="resource-tree" data-mage-init='{
+                "frontAclPermissionsTree": <?= /* @noEscape */ $block->getJsonConfig() ?>
+            }'></div>
+        </div>
+    </div>
+</fieldset>
+
+<!-- Show child blocks: -->
+<?php foreach ($block->getChildNames() as $childName): ?>
+    <?php if ($childBlock = $block->getChildBlock($childName)): ?>
+        <div class="dized-front-acl-tab-permissions-addto">
+            <?php $childBlock->setCustomer($block->getCustomer()); ?>
+            <?php $childBlock->setCustomerFormData($block->getCustomerFormData()); ?>
+            <?= /* @noEscape */ $childBlock->toHtml() ?>
+        </div>
+    <?php endif; ?>
+<?php endforeach; ?>
+
+<script>
+require(['jquery'], function ($) {
+    $('.x-tree').trigger('contentUpdated');
+})
+</script>

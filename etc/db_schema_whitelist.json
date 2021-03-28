@@ -1,0 +1,19 @@
+{
+    "dized_front_acl_permissions": {
+        "column": {
+            "id": true,
+            "customer_id": true,
+            "resource_type": true,
+            "resource_id": true,
+            "permission": true,
+            "created_at": true
+        },
+        "index": {
+            "DIZED_FRONT_ACL_PERMISSIONS_CUSTOMER_ID": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "DIZED_FRONT_ACL_PERMISSIONS_CSTR_ID_CSTR_ENTT_ENTT_ID": true
+        }
+    }
+}
