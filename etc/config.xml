@@ -2,10 +2,11 @@
 <!--
 /**
  * @author DiZed Team
- * @copyright Copyright (c) DiZed (https://github.com/di-zed/)
+ * @copyright Copyright (c) DiZed Team (https://github.com/di-zed/)
  */
 -->
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
     <default>
         <dized_front_acl>
             <general>

@@ -2,7 +2,7 @@
 <!--
 /**
  * @author DiZed Team
- * @copyright Copyright (c) DiZed (https://github.com/di-zed/)
+ * @copyright Copyright (c) DiZed Team (https://github.com/di-zed/)
  */
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
@@ -11,7 +11,7 @@
         <referenceBlock name="customer_form">
             <block class="DiZed\FrontAcl\Block\Adminhtml\Edit\Tab\Permissions"
                    name="dized.front.acl.tab.permissions"
-                   template="DiZed_FrontAcl::customer/permissions.phtml" />
+                   template="DiZed_FrontAcl::customer/permissions.phtml"/>
         </referenceBlock>
     </body>
 </page>

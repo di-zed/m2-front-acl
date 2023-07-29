@@ -2,14 +2,12 @@
 <!--
 /**
  * @author DiZed Team
- * @copyright Copyright (c) DiZed (https://github.com/di-zed/)
+ * @copyright Copyright (c) DiZed Team (https://github.com/di-zed/)
  */
 -->
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
-        <tab id="dized" translate="label" sortOrder="1000">
-            <label>DiZed Extensions</label>
-        </tab>
         <section id="dized_front_acl" translate="label" type="text" sortOrder="1000" showInDefault="1" showInWebsite="1" showInStore="1">
             <label>Front Acl</label>
             <tab>dized</tab>

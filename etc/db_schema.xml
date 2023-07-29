@@ -2,25 +2,28 @@
 <!--
 /**
  * @author DiZed Team
- * @copyright Copyright (c) DiZed (https://github.com/di-zed/)
+ * @copyright Copyright (c) DiZed Team (https://github.com/di-zed/)
  */
 -->
 <schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
     <!-- Create "Front ACL Permissions" table. -->
     <table name="dized_front_acl_permissions" resource="default" engine="innodb" comment="DiZed Front Acl Permissions">
-        <column xsi:type="int" name="id" unsigned="true" nullable="false" identity="true" comment="Entity ID" />
-        <column xsi:type="int" name="customer_id" unsigned="true" nullable="false" comment="Customer ID" />
-        <column xsi:type="varchar" name="resource_type" nullable="false" length="255" comment="Resource Type" />
-        <column xsi:type="varchar" name="resource_id" nullable="false" length="255" comment="Resource ID" />
-        <column xsi:type="varchar" name="permission" nullable="false" length="255" comment="Permission" />
-        <column xsi:type="timestamp" name="created_at" on_update="false" nullable="false" default="CURRENT_TIMESTAMP" comment="Created At"/>
+        <column xsi:type="int" name="id" unsigned="true" nullable="false" identity="true" comment="Entity ID"/>
+        <column xsi:type="int" name="customer_id" unsigned="true" nullable="false" comment="Customer ID"/>
+        <column xsi:type="varchar" name="resource_type" nullable="false" length="255" comment="Resource Type"/>
+        <column xsi:type="varchar" name="resource_id" nullable="false" length="255" comment="Resource ID"/>
+        <column xsi:type="varchar" name="permission" nullable="false" length="255" comment="Permission"/>
+        <column xsi:type="timestamp" name="created_at" on_update="false" nullable="false" default="CURRENT_TIMESTAMP"
+                comment="Created At"/>
         <constraint xsi:type="primary" referenceId="PRIMARY">
-            <column name="id" />
+            <column name="id"/>
         </constraint>
-        <constraint xsi:type="foreign" referenceId="DIZED_FRONT_ACL_PERMISSIONS_CUSTOMER_ID_CUSTOMER_ENTITY_ENTITY_ID" table="dized_front_acl_permissions" column="customer_id" referenceTable="customer_entity" referenceColumn="entity_id" onDelete="CASCADE" />
+        <constraint xsi:type="foreign" referenceId="DIZED_FRONT_ACL_PERMISSIONS_CUSTOMER_ID_CUSTOMER_ENTITY_ENTITY_ID"
+                    table="dized_front_acl_permissions" column="customer_id"
+                    referenceTable="customer_entity" referenceColumn="entity_id" onDelete="CASCADE"/>
         <index referenceId="DIZED_FRONT_ACL_PERMISSIONS_CUSTOMER_ID" indexType="btree">
-            <column name="customer_id" />
+            <column name="customer_id"/>
         </index>
     </table>
 </schema>

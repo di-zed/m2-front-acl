@@ -2,12 +2,14 @@
 <!--
 /**
  * @author DiZed Team
- * @copyright Copyright (c) DiZed (https://github.com/di-zed/)
+ * @copyright Copyright (c) DiZed Team (https://github.com/di-zed/)
  */
 -->
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
     <event name="adminhtml_customer_save_after">
         <!-- Adding permission rules to the customer. -->
-        <observer name="DiZed_FrontAcl::CustomerSaveAfter" instance="DiZed\FrontAcl\Observer\Adminhtml\Customer\SaveAfterObserver" />
+        <observer name="DiZed_FrontAcl::CustomerSaveAfter"
+                  instance="DiZed\FrontAcl\Observer\Adminhtml\Customer\SaveAfterObserver"/>
     </event>
 </config>

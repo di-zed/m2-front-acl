@@ -2,13 +2,15 @@
 <!--
 /**
  * @author DiZed Team
- * @copyright Copyright (c) DiZed (https://github.com/di-zed/)
+ * @copyright Copyright (c) DiZed Team (https://github.com/di-zed/)
  */
 -->
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
-	<module name="DiZed_FrontAcl" setup_version="1.0.0">
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+	<module name="DiZed_FrontAcl" setup_version="1.0.1">
 		<sequence>
-			<module name="Magento_Customer" />
+			<module name="DiZed_Core"/>
+			<module name="Magento_Customer"/>
 		</sequence>
 	</module>
 </config>

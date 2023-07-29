@@ -2,18 +2,23 @@
 <!--
 /**
  * @author DiZed Team
- * @copyright Copyright (c) DiZed (https://github.com/di-zed/)
+ * @copyright Copyright (c) DiZed Team (https://github.com/di-zed/)
  */
 -->
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
     <!-- Role management. -->
-    <preference for="DiZed\FrontAcl\Api\RoleManagementInterface" type="DiZed\FrontAcl\Model\RoleManagement" />
+    <preference for="DiZed\FrontAcl\Api\RoleManagementInterface" type="DiZed\FrontAcl\Model\RoleManagement"/>
     <!-- Permission API. -->
-    <preference for="DiZed\FrontAcl\Api\PermissionRepositoryInterface" type="DiZed\FrontAcl\Model\PermissionRepository" />
-    <preference for="DiZed\FrontAcl\Api\Data\PermissionInterface" type="DiZed\FrontAcl\Model\Permission" />
-    <preference for="DiZed\FrontAcl\Api\Data\PermissionSearchResultsInterface" type="DiZed\FrontAcl\Model\PermissionSearchResults" />
+    <preference for="DiZed\FrontAcl\Api\PermissionRepositoryInterface"
+                type="DiZed\FrontAcl\Model\PermissionRepository"/>
+    <preference for="DiZed\FrontAcl\Api\Data\PermissionInterface"
+                type="DiZed\FrontAcl\Model\Permission"/>
+    <preference for="DiZed\FrontAcl\Api\Data\PermissionSearchResultsInterface"
+                type="DiZed\FrontAcl\Model\PermissionSearchResults"/>
     <!-- Working with role ACL file. -->
-    <virtualType name="DiZed\FrontAcl\AclRole\AclResource\Config\Reader\Filesystem" type="Magento\Framework\Acl\AclResource\Config\Reader\Filesystem">
+    <virtualType name="DiZed\FrontAcl\AclRole\AclResource\Config\Reader\Filesystem"
+                 type="Magento\Framework\Acl\AclResource\Config\Reader\Filesystem">
         <arguments>
             <argument name="fileName" xsi:type="string">acl_front.xml</argument>
         </arguments>
@@ -26,11 +31,12 @@
     </virtualType>
     <type name="DiZed\FrontAcl\Model\Config\Source\Roles">
         <arguments>
-            <argument name="aclResourceProvider" xsi:type="object">DiZed\FrontAcl\AclRole\AclResource\Provider</argument>
+            <argument name="aclResourceProvider"
+                      xsi:type="object">DiZed\FrontAcl\AclRole\AclResource\Provider</argument>
         </arguments>
     </type>
     <!-- Plugin for account management interface. -->
     <type name="Magento\Customer\Api\AccountManagementInterface">
-        <plugin name="DiZed_FrontAcl::AccountManagement" type="DiZed\FrontAcl\Plugin\Customer\Api\AccountManagement" />
+        <plugin name="DiZed_FrontAcl::AccountManagement" type="DiZed\FrontAcl\Plugin\Customer\Api\AccountManagement"/>
     </type>
 </config>

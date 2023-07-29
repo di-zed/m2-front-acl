@@ -34,21 +34,21 @@ If you want to set the default permissions for some roles, use the **FrontAcl_De
         <resources>
             <!-- Roles: -->
             <resource id="FrontAcl_Role::index" title="Roles" translate="title">
-                <resource id="FrontAcl_Role::buyer" title="Buyer" translate="title" />
-                <resource id="FrontAcl_Role::seller" title="Seller" translate="title" />
+                <resource id="FrontAcl_Role::buyer" title="Buyer" translate="title"/>
+                <resource id="FrontAcl_Role::seller" title="Seller" translate="title"/>
             </resource>
             <!-- Permissions: -->
             <resource id="FrontAcl_Permission::index" title="Permissions" translate="title">
-                <resource id="FrontAcl_Permission::catalog" title="Catalog" translate="title" />
-                <resource id="FrontAcl_Permission::checkout" title="Checkout" translate="title" />
-                <resource id="FrontAcl_Permission::wishlist" title="Wishlist" translate="title" />
+                <resource id="FrontAcl_Permission::catalog" title="Catalog" translate="title"/>
+                <resource id="FrontAcl_Permission::checkout" title="Checkout" translate="title"/>
+                <resource id="FrontAcl_Permission::wishlist" title="Wishlist" translate="title"/>
             </resource>
             <!-- Defaults (default relations between roles and permissions): -->
             <resource id="FrontAcl_Defaults::index" title="Default Relations" translate="title">
-                <resource id="Relation_Buyer::catalog" title="Catalog" />
-                <resource id="Relation_Buyer::checkout" title="Checkout" />
-                <resource id="Relation_Buyer::wishlist" title="Wishlist" />
-                <resource id="Relation_Seller::catalog" title="Catalog" />
+                <resource id="Relation_Buyer::catalog" title="Catalog"/>
+                <resource id="Relation_Buyer::checkout" title="Checkout"/>
+                <resource id="Relation_Buyer::wishlist" title="Wishlist"/>
+                <resource id="Relation_Seller::catalog" title="Catalog"/>
             </resource>
         </resources>
     </acl>

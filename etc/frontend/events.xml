@@ -2,12 +2,12 @@
 <!--
 /**
  * @author DiZed Team
- * @copyright Copyright (c) DiZed (https://github.com/di-zed/)
+ * @copyright Copyright (c) DiZed Team (https://github.com/di-zed/)
  */
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
     <event name="customer_login">
         <!-- Adding permission to the customer session. -->
-        <observer name="DiZed_FrontAcl::CustomerLogin" instance="DiZed\FrontAcl\Observer\Customer\LoginObserver" />
+        <observer name="DiZed_FrontAcl::CustomerLogin" instance="DiZed\FrontAcl\Observer\Customer\LoginObserver"/>
     </event>
 </config>

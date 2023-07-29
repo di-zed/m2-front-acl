@@ -2,14 +2,14 @@
 <!--
 /**
  * @author DiZed Team
- * @copyright Copyright (c) DiZed (https://github.com/di-zed/)
+ * @copyright Copyright (c) DiZed Team (https://github.com/di-zed/)
  */
 -->
 <listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
     <columns name="customer_columns" class="Magento\Customer\Ui\Component\Listing\Columns">
         <column name="resource_id" class="DiZed\FrontAcl\Ui\Component\Listing\Column\ResourceId" sortOrder="1000">
             <settings>
-                <options class="DiZed\FrontAcl\Model\Config\Source\Roles" />
+                <options class="DiZed\FrontAcl\Model\Config\Source\Roles"/>
                 <filter>select</filter>
                 <dataType>select</dataType>
                 <label translate="true">Resource Role</label>
