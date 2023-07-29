@@ -18,7 +18,7 @@ use Magento\Customer\Model\Session;
 use Magento\Framework\Stdlib\DateTime\TimezoneInterface;
 
 /**
- * Role Management for Front Acl module.
+ * Role Management for Front ACL module.
  */
 class RoleManagement implements RoleManagementInterface
 {

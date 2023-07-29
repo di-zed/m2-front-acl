@@ -20,6 +20,8 @@ A module that will allow you to take full advantage of the front-end ACL capabil
 composer require dized/module-front-acl
 ```
 
+**IMPORTANT** to enable the module in Magento Admin: **Admin Panel -> Stores -> Settings -> Configuration -> DiZed Team Extensions -> Front ACL**.
+
 ### Adding Roles and Permissions.
 
 To add new roles or permissions, create the **etc/acl_front.xml** file in your own project module. You can see an example of a file in this module.

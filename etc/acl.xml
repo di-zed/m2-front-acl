@@ -14,7 +14,7 @@
                     <resource id="Magento_Backend::stores_settings">
                         <resource id="Magento_Config::config">
                             <resource id="DiZed_Core::config">
-                                <resource id="DiZed_FrontAcl::config" title="Front Acl" sortOrder="1000"/>
+                                <resource id="DiZed_FrontAcl::config" title="Front ACL" sortOrder="1000"/>
                             </resource>
                         </resource>
                     </resource>

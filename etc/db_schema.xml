@@ -8,7 +8,7 @@
 <schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
     <!-- Create "Front ACL Permissions" table. -->
-    <table name="dized_front_acl_permissions" resource="default" engine="innodb" comment="DiZed Front Acl Permissions">
+    <table name="dized_front_acl_permissions" resource="default" engine="innodb" comment="DiZed Front ACL Permissions">
         <column xsi:type="int" name="id" unsigned="true" nullable="false" identity="true" comment="Entity ID"/>
         <column xsi:type="int" name="customer_id" unsigned="true" nullable="false" comment="Customer ID"/>
         <column xsi:type="varchar" name="resource_type" nullable="false" length="255" comment="Resource Type"/>

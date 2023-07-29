@@ -1,7 +1,7 @@
 {
     "name": "dized/module-front-acl",
     "description": "ACL System for the Front Part of the Magento 2 project",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "keywords": ["dized", "front", "acl", "module", "magento"],
     "type": "magento2-module",
     "license": "MIT",

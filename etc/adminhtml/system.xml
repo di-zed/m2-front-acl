@@ -9,7 +9,7 @@
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
         <section id="dized_front_acl" translate="label" type="text" sortOrder="1000" showInDefault="1" showInWebsite="1" showInStore="1">
-            <label>Front Acl</label>
+            <label>Front ACL</label>
             <tab>dized</tab>
             <resource>DiZed_FrontAcl::config</resource>
             <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
