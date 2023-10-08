@@ -33,7 +33,7 @@
             <span><?= $escaper->escapeHtml(__('Resources')) ?></span>
         </label>
         <div class="control">
-            <div class="tree x-tree" data-role="resource-tree" data-mage-init='{
+            <div class="tree x-tree permission-tree" data-role="resource-tree" data-mage-init='{
                 "frontAclPermissionsTree": <?= /* @noEscape */ $block->getJsonConfig() ?>
             }'></div>
         </div>

@@ -18,9 +18,15 @@ A module that will allow you to take full advantage of the front-end ACL capabil
 
 ```code
 composer require dized/module-front-acl
+
+bin/magento setup:upgrade --keep-generated
+bin/magento setup:di:compile
+bin/magento cache:clean
 ```
 
 **IMPORTANT** to enable the module in Magento Admin: **Admin Panel -> Stores -> Settings -> Configuration -> DiZed Team Extensions -> Front ACL**.
+
+![Module Configuration](https://raw.githubusercontent.com/di-zed/internal-storage/main/readme/images/m2-front-acl/config_front_acl.png)
 
 ### Adding Roles and Permissions.
 
@@ -60,6 +66,11 @@ If you want to set the default permissions for some roles, use the **FrontAcl_De
 ### Set customer roles and permissions in admin panel.
 
 To set a role or permissions for a customer through the admin panel, just log in as an administrator and follow the following path: **Customers -> All Customers -> Click to "Edit" for a customer in the grid -> Tab Front ACL**. Select the required data here and save the customer.
+
+![Customer Settings](https://raw.githubusercontent.com/di-zed/internal-storage/main/readme/images/m2-front-acl/customer_front_acl.png)
+
+**IMPORTANT** If the permissions tree is not displayed, it is very likely that you are using a version of Magento with an older version of the jQuery jsTree library.
+In this case, try using the [previous script "view/adminhtml/web/js/customer/permissions-tree.js" version](https://raw.githubusercontent.com/di-zed/m2-front-acl/21ceaa62f3a93cacce0a76ef2ef33ebf9a773430/view/adminhtml/web/js/customer/permissions-tree.js).
 
 ### Set the default role and permissions for a newly created customer automatically.
 

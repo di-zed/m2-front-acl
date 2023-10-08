@@ -56,18 +56,34 @@ class SaveAfterObserver implements ObserverInterface
 
         /** @var Http $request */
         $request = $observer->getRequest();
-        /** @var Customer $customer */
-        $customer = $observer->getCustomer();
 
-        // set role for customer:
-        if ($role = $this->getPostRole($request)) {
-            $this->roleManagement->setRole($role, $customer);
+        if ($this->isFrontAclLoaded($request)) {
+            /** @var Customer $customer */
+            $customer = $observer->getCustomer();
+            // set role for customer:
+            if ($role = $this->getPostRole($request)) {
+                $this->roleManagement->setRole($role, $customer);
+            } else {
+                $this->roleManagement->resetRole($customer);
+            }
+            // set permissions for customer:
+            if ($permissions = $this->getPostPermissions($request)) {
+                $this->roleManagement->setPermissions($permissions, $customer);
+            } else {
+                $this->roleManagement->resetPermissions($customer);
+            }
         }
+    }
 
-        // set permissions for customer:
-        if ($permissions = $this->getPostPermissions($request)) {
-            $this->roleManagement->setPermissions($permissions, $customer);
-        }
+    /**
+     * Is Front ACL loaded?
+     *
+     * @param Http $request
+     * @return bool
+     */
+    protected function isFrontAclLoaded(Http $request): bool
+    {
+        return (bool)$request->getParam('is_front_acl_loaded');
     }
 
     /**

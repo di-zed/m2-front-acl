@@ -7,7 +7,7 @@
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
-	<module name="DiZed_FrontAcl" setup_version="1.0.2">
+	<module name="DiZed_FrontAcl" setup_version="1.0.3">
 		<sequence>
 			<module name="DiZed_Core"/>
 			<module name="Magento_Customer"/>
